@@ -2,9 +2,9 @@ import { createClient } from 'redis';
 import { promisify } from 'util';
 
 class RedisClient {
-    /**
+  /**
      * This class used to create a Redis client
-     * 
+     *
      * Methods:
      *  - isAlive: This method is used to check if the redis connection is alive
      *  - get: This method is used to retrieve from the redis database
@@ -18,9 +18,7 @@ class RedisClient {
 
   isAlive() {
     try {
-      this.client.on('connect', () => {
-      });
-      this.client.ping();
+      this.client.on('connect', () => {});
       return true;
     } catch (err) {
       return false;
