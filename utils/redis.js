@@ -17,12 +17,10 @@ class RedisClient {
   }
 
   isAlive() {
-    try {
-      this.client.on('connect', () => {});
-      return true;
-    } catch (err) {
-      return false;
-    }
+    this.client.on('connect', () => {
+        return true
+    });
+    return false
   }
 
   async get(key) {
