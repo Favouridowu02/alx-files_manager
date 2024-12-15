@@ -1,6 +1,16 @@
 import MongoClient from 'mongodb/lib/mongo_client';
 
 class DBClient {
+  /**
+     * This Class is used to manage the Mongo Database
+     *
+     * Methods:
+     *  - isAlive: This method is used to check if the database is connected
+     *  - nbUsers: This method is used to return the number of documents contained
+     *             in the users collection
+     *  - nbFiles: This method is used to return the number of documents contained
+     *             in the files collection
+     */
   constructor() {
     this.host = process.env.DB_HOST || 'localhost';
     this.port = process.env.DB_PORT || 27017;
